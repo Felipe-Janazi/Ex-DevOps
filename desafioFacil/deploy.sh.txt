@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+echo "Construindo e iniciando os contêineres com Docker Compose..."
+docker-compose down
+docker-compose build
+docker-compose up -d
+
+echo "Configuração completa! Acesse a aplicação em http://localhost."
